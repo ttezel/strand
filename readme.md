@@ -15,11 +15,11 @@ var strand = require('strand')
 var foo = 'execution'
 var bar = 'intention'
 
-// -> 5
 var editDistance = strand.editDistance(foo, bar)
+// => 5
 
-// -> 'tion'
 var sequenceMatch = strand.sequenceMatch(foo, bar)
+// => 'tion'
 ```
 
 ##API
