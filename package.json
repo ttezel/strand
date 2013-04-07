@@ -1,0 +1,25 @@
+{
+  "name": "strand",
+  "version": "0.0.0",
+  "description": "string tools",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -t 10s -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ttezel/strand.git"
+  },
+  "keywords": [
+    "string",
+    "tools",
+    "edit",
+    "levenshtein",
+    "distance"
+  ],
+  "author": "Tolga Tezel",
+  "license": "MIT",
+  "dependencies": {
+    "mocha": "~1.9.0"
+  }
+}
