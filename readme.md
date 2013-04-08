@@ -16,10 +16,10 @@ var foo = 'execution'
 var bar = 'intention'
 
 var editDistance = strand.editDistance(foo, bar)
-// => 5
+// =>  5
 
-var sequenceMatch = strand.sequenceMatch(foo, bar)
-// => 'tion'
+var lcs = strand.lcs(foo, bar)
+// => { sequence: 'etion', len: 5 }
 ```
 
 ##API
@@ -28,7 +28,7 @@ var sequenceMatch = strand.sequenceMatch(foo, bar)
 
 Determines the minimum edit distance between two strings.
 
-###`strand.sequenceMatch(str1, str2)`
+###`strand.lcs(str1, str2)`
 
 Determines the longest common subsequence of two strings.
 

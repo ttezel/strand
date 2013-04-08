@@ -30,25 +30,25 @@ describe('editDistance', function () {
     })
 })
 
-describe('sequenceMatch', function () {
-    it('between `execution` and `intention` is `tion`', function (done) {
+describe('longest common subsequence (lcs)', function () {
+    it('of `execution` and `intention` is `etion`', function (done) {
         var x = 'execution'
         var y = 'intention'
 
-        var match = strand.sequenceMatch(x,y)
+        var match = strand.lcs(x,y)
 
         assert.equal('etion', match.sequence)
         assert.equal(5, match.len)
 
         done()
     })
-    it('between `agcat` and `gac` is `ac` or `ga`', function (done) {
+    it('of `agcat` and `gac` is `ga`', function (done) {
         var x = 'agcat'
         var y = 'gac'
 
-        var match = strand.sequenceMatch(x,y)
+        var match = strand.lcs(x,y)
 
-        assert('ac' === match.sequence || 'ga' === match.sequence)
+        assert('ga' === match.sequence)
         assert.equal(2, match.len)
 
         done()
