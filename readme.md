@@ -30,7 +30,7 @@ Determines the minimum edit distance between two strings.
 
 ###`strand.sequenceMatch(str1, str2)`
 
-Determines the longest sequential match of characters between two strings.
+Determines the longest common subsequence of two strings.
 
 ## License 
 

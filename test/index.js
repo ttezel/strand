@@ -31,12 +31,27 @@ describe('editDistance', function () {
 })
 
 describe('sequenceMatch', function () {
-    it('between `x` and `y` is correct', function (done) {
+    it('between `execution` and `intention` is `tion`', function (done) {
         var x = 'execution'
         var y = 'intention'
 
-        assert.equal('tion', strand.sequenceMatch(x,y))
+        var match = strand.sequenceMatch(x,y)
+
+        assert.equal('etion', match.sequence)
+        assert.equal(5, match.len)
 
         done()
     })
+    it('between `agcat` and `gac` is `ac` or `ga`', function (done) {
+        var x = 'agcat'
+        var y = 'gac'
+
+        var match = strand.sequenceMatch(x,y)
+
+        assert('ac' === match.sequence || 'ga' === match.sequence)
+        assert.equal(2, match.len)
+
+        done()
+    })
+
 })
