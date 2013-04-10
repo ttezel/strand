@@ -35,7 +35,7 @@ describe('longest common subsequence (lcs)', function () {
         var x = 'execution'
         var y = 'intention'
 
-        var match = strand.lcs(x,y)
+        var match = strand.subSequence(x,y)
 
         assert.equal('etion', match.sequence)
         assert.equal(5, match.len)
@@ -46,7 +46,7 @@ describe('longest common subsequence (lcs)', function () {
         var x = 'agcat'
         var y = 'gac'
 
-        var match = strand.lcs(x,y)
+        var match = strand.subSequence(x,y)
 
         assert('ga' === match.sequence)
         assert.equal(2, match.len)

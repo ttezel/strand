@@ -12,13 +12,10 @@ npm install strand
 ```javascript
 var strand = require('strand')
 
-var foo = 'execution'
-var bar = 'intention'
-
-var editDistance = strand.editDistance(foo, bar)
+var editDistance = strand.editDistance('execution', 'intention')
 // =>  5
 
-var lcs = strand.lcs(foo, bar)
+var subSequence = strand.subSequence('execution', 'intention')
 // => { sequence: 'etion', len: 5 }
 ```
 
@@ -28,7 +25,7 @@ var lcs = strand.lcs(foo, bar)
 
 Determines the minimum edit distance between two strings.
 
-###`strand.lcs(str1, str2)`
+###`strand.subSequence(str1, str2)`
 
 Determines the longest common subsequence of two strings.
 
